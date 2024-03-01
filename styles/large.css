@@ -1,12 +1,22 @@
-@media only screen and (min-width: 32rem) {
-
+/* Media query for larger views */
+@media only screen and (min-width: 768px) {
     .parent {
         display: grid;
-        grid-template-columns: 2fr 1fr;
+        grid-template-columns: 1fr 1fr; /* Two columns layout */
         column-gap: 10px;
+    }
+
+    nav ul {
+        text-align: center;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-around;
     }
 
     .card {
         box-shadow: 1px 1px 10px black;
     }
+
 }

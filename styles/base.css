@@ -29,7 +29,7 @@ header {
 header img {
     display: block;
     margin: 0 auto;
-    width: 15%;
+    width: 100px;
     border-radius: 50%;
     margin-bottom: 10px;
 }
@@ -44,8 +44,7 @@ nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: space-around;
+    display: block; /* Display the list items vertically */
 }
 
 nav ul li {
@@ -57,7 +56,7 @@ nav ul li a {
     text-decoration: none;
     color: #9162bd;
     font-weight: bold;
-    font-size: 4vw;
+    font-size: 2vw;
     transition: color 0.3s; /* Smooth transition effect */
 }
 
@@ -93,6 +92,11 @@ h2 {
     margin: .3rem 0;
 }
 
+/* Background color behind h2 items */
+.parent section h2 {
+    background-color: #ddd;
+}
+
 /* Styling for span within parent */
 .parent span {
     background-color: #415541;
@@ -120,4 +124,8 @@ ul {
 /* Footer */
 footer {
     font-family: monospace;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px; /* Add padding to the left and right edges */
 }
