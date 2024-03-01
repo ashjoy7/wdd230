@@ -6,11 +6,31 @@
     <title>Ashley Egan - WDD 230 - Web Frontend Development</title>
     <meta name="description" content="Ashley Egan's course assignment portal for WDD 230 - Web Frontend Development. Explore various projects including Holy Grail and Media Query.">
     <meta name="author" content="Ashley Egan">
+    <style>
+        /* CSS Grid for layout */
+        main {
+            display: grid;
+            grid-gap: 20px;
+        }
+
+        .card {
+            border: 1px solid #ccc;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
+        /* Responsive layout */
+        @media screen and (min-width: 768px) {
+            main {
+                grid-template-columns: 2fr 1fr; /* Learning Activities card is twice as wide */
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
         <!-- Header content goes here -->
-        <img src="images/profile.jpg" alt="Ashley Egan Profile Picture">
+        <img src="week01/images/profile.jpg" alt="Ashley Egan Profile Picture">
         <span>Ashley Egan</span>
     </header>
     
@@ -26,8 +46,23 @@
     
     <main>
         <!-- Main content goes here -->
-        <h2>Week One Projects</h2>
-        <p>Explore Ashley Egan's projects for WDD 230 - Web Frontend Development.</p>
+        <h1>WDD 230 Week One</h1>
+        
+        <div class="parent">
+            <section class="card">
+                <h2>Learning Activities</h2>
+                <ul>
+                    <li><a href="week01/holygrail.html">Holy Grail</a></li>
+                    <li><a href="week01/media-query.html">Media Query</a></li>
+                </ul>
+            </section>
+            
+            <section class="card">
+                <h2>Information</h2>
+                <p>Weather: Sunny</p>
+                <p>Number of visits: 100</p>
+            </section>
+        </div>
     </main>
     
     <footer>
