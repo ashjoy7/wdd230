@@ -1,12 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header, footer, nav {background-color: #bbb;}
+
+/*basic CSS Grid*/
 main {
     display: grid;
     grid-gap: 20px;
-}
-
-@media screen and (min-width: 768px) {
-    main {
-        grid-template-columns: 2fr 1fr; /* Learning Activities card is twice as wide */
-    }
 }
 
 .card {
@@ -15,9 +17,33 @@ main {
     background-color: #f9f9f9;
 }
 
-/* Responsive layout */
-@media screen and (max-width: 767px) {
-    main {
-        grid-template-columns: 1fr; /* Cards are stacked on small screens */
-    }
+.parent {
+    display: grid;
+    grid-gap: 20px;
 }
+
+/*parent*/
+.parent {
+    margin: 1rem 2vw
+}
+
+.parent section{
+    border: 1px solid #415541;
+    background-color: #e9f5e9;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 1rem 0;
+}
+
+.parent span {
+    background-color: #415541;
+    color: #fff;
+    display: block;
+    text-align: center;
+    padding: .75rem 0;
+}
+
+.parent p {
+    padding: 10px;
+}
+

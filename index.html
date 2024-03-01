@@ -6,36 +6,19 @@
     <title>Ashley Egan - WDD 230 - Web Frontend Development</title>
     <meta name="description" content="Ashley Egan's course assignment portal for WDD 230 - Web Frontend Development. Explore various projects including Holy Grail and Media Query.">
     <meta name="author" content="Ashley Egan">
-    <style>
-        /* CSS Grid for layout */
-        main {
-            display: grid;
-            grid-gap: 20px;
-        }
-
-        .card {
-            border: 1px solid #ccc;
-            padding: 20px;
-            background-color: #f9f9f9;
-        }
-
-        /* Responsive layout */
-        @media screen and (min-width: 768px) {
-            main {
-                grid-template-columns: 2fr 1fr; /* Learning Activities card is twice as wide */
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/large.css">
 </head>
+
 <body>
     <header>
-        <!-- Header content goes here -->
+
         <img src="images/profile.jpg" alt="Ashley Egan Profile Picture">
         <span>Ashley Egan</span>
     </header>
     
     <nav>
-        <!-- Navigation content goes here -->
+
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="chamber.html">Chamber</a></li>
@@ -43,11 +26,9 @@
             <li><a href="form.html">Form</a></li>
         </ul>
     </nav>
-    
+
     <main>
-        <!-- Main content goes here -->
         <h1>WDD 230 Week One</h1>
-        
         <div class="parent">
             <section class="card">
                 <h2>Learning Activities</h2>
@@ -64,10 +45,11 @@
             </section>
         </div>
     </main>
-    
+
     <footer>
-        <!-- Footer content goes here -->
         <p>&copy; 2024 Ashley Egan - WDD 230</p>
     </footer>
+    
 </body>
+
 </html>
