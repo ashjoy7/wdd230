@@ -1,6 +1,6 @@
 /* Header, footer, and nav */
 header, footer, nav {
-    background-color: #bbb;
+    background-color: #e8e8e8;
 }
 
 /* Grid layout */
@@ -46,7 +46,7 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #9162bd;
+    color: #5e2692;
     font-weight: bold;
     font-size: 2vw;
     transition: color 0.3s; /* Smooth transition effect */
@@ -54,7 +54,7 @@ nav ul li a {
 
 /* Change color on hover */
 nav ul li a:hover {
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 /* Main content */
@@ -78,7 +78,7 @@ h2 {
 
 /* Sections within parent */
 .parent section {
-    border: 3px solid #a489bd;
+    border: 3px solid #5e2692;
     background-color: #e4f7fc;
     border-radius: 10px;
     overflow: hidden;
@@ -87,7 +87,7 @@ h2 {
 
 /* Styling for span within parent */
 .parent span {
-    background-color: #415541;
+    background-color: #6b6b6b;
     color: #fff;
     display: block;
     text-align: center;
@@ -109,11 +109,19 @@ ul {
     list-style-type: disc;
 }
 
+.card a {
+    color: #5e2692;
+}
+
+.card p {
+    color: #5e2692;
+}
+
 /* Footer */
 footer {
     font-family: monospace;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px; /* Add padding to the left and right edges */
+    padding: 0 20px; 
 }
