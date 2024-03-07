@@ -19,6 +19,7 @@
     
     <link rel="icon" href="favicon.ico">
     
+    <script src="scripts/hamburger.js" defer></script>
 </head>
 
 <body>
@@ -27,7 +28,14 @@
         <span>Ashley Egan</span>
     </header>
     
-    <nav>
+    <input type="checkbox" class="nav-toggle" id="nav-toggle">
+    <label for="nav-toggle" class="nav-toggle-label">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+    
+    <nav class="nav-list">
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="chamber.html">Chamber</a></li>
@@ -73,6 +81,5 @@
         <p id="lastModified">Last modified: </p>
     </footer>
 
-    <script src="scripts/getDates.js"></script>
 </body>
 </html>
