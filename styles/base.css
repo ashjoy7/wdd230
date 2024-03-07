@@ -16,6 +16,7 @@ header {
     background-color: #333;
     color: #fff;
     font-family: monospace;
+    position: relative; /* Add position relative for button positioning */
 }
 
 header img {
@@ -135,9 +136,11 @@ nav.show {
     display: block; /* Show the nav when .show class is added */
 }
 
-button {
-    background: none;
-    border: none;
+/* Update dark mode button styling */
+button#mode {
+    background-color: #333; /* Add background color */
+    color: #fff; /* Add text color */
+    border: none; /* Remove border */
     cursor: pointer;
     font-size: 20px;
     padding: 10px;
@@ -145,4 +148,12 @@ button {
     top: 10px;
     right: 10px;
     z-index: 1000;
+}
+
+
+/* Show button only in larger views */
+@media only screen and (max-width: 768px) {
+    header button#mode {
+        display: none;
+    }
 }
