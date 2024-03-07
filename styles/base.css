@@ -125,3 +125,24 @@ footer {
     align-items: center;
     padding: 0 20px; 
 }
+
+/* Styles for smaller views */
+nav {
+    display: none; /* Initially hide the nav in smaller views */
+}
+
+nav.show {
+    display: block; /* Show the nav when .show class is added */
+}
+
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 10px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+}

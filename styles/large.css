@@ -1,5 +1,15 @@
 /* Media query for larger views */
 @media only screen and (min-width: 768px) {
+    /* Styles for navigation in larger views */
+    nav {
+        display: block; /* Ensure nav is visible in larger views */
+    }
+
+    /* Hamburger button hide in larger views */
+    button {
+        display: none;
+    }
+
     .parent {
         display: grid;
         grid-template-columns: 1fr 1fr; /* Two columns layout */
@@ -18,5 +28,5 @@
     .card {
         box-shadow: 1px 1px 10px black;
     }
-
 }
+
