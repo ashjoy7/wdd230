@@ -29,18 +29,21 @@ nav ul li {
 }
 
 /* Hero section styles */
-.hero {
-    background-color: #FF8000;
+.current-events, .weather, .spotlights{
+    background-color: #ffffff;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 20px;
+}
+
+.grid-container {
+    display: flex;
 }
 
 .hero img {
     width: 100%;
     height: auto;
-}
-
-/* Footer styles */
-footer {
-    text-align: center;
 }
 
 /* Custom styles for headings and links */
