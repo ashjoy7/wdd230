@@ -6,6 +6,13 @@
     <meta name="description" content="Welcome to the Huachuca City Chamber of Commerce.">
     <title>Chamber of Commerce Home Page</title>
     <meta name="author" content="Ashley Egan">
+
+     <!-- Open Graph meta properties -->
+     <meta property="og:title" content="Ashley Egan - WDD 230 - Chamber Site">
+     <meta property="og:type" content="website">
+     <meta property="og:image" content="https://img1.wsimg.com/isteam/ip/58c32fbd-879f-43d6-bd44-5d1bcc943691/Huachuca%20City%20AZ%2001.JPG/:/cr=t:0%25,l:0%25,w:100%25,h:100%25">
+     <meta property="og:url" content="https://ashjoy7.github.io/wdd230/chamber/index.html">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,6 +25,9 @@
 </head>
 <body>
     <header>
+        <div class="logo">
+            <h1> Huachuca City Chamber of Commerce</h1>
+        </div>
         <div class="container">
             <h1>Huachuca City Chamber of Commerce</h1>
             <button class="menu-toggle" id="hamburger">Menu</button> <!-- Added id="hamburger" -->
@@ -30,9 +40,13 @@
                     <li><a href="#">Contact</a></li>
                 </ul>
             </nav>
-        </div>
+        </div> 
+        <section class="cta">
+            <a href="#" class="button">Join the Chamber of Commerce</a>
+        </section>
     </header>
     <main>
+       
         <section class="hero">
             <img src="images/huachuca-mountains.jpg" alt="Hero Image">
             <div class="grid-container">
@@ -50,9 +64,7 @@
                 </div>
             </div>
         </section>
-        <section class="cta">
-            <a href="#" class="button">Join the Chamber of Commerce</a>
-        </section>
+        
     </main>
     <footer>
         <div class="container">
