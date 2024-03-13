@@ -1,4 +1,16 @@
-/* Header, footer, and nav */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+/* Resetting default browser styles */
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, figure, figcaption, img, picture {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
 header, footer, nav {
     background-color: #e8e8e8;
 }
@@ -150,10 +162,37 @@ button#mode {
     z-index: 1000;
 }
 
+/* Temple overlay */
+.hero {
+    margin: 10px auto;
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, .1);
+    height: 300px;
+}
 
-/* Show button only in larger views */
-@media only screen and (max-width: 768px) {
-    header button#mode {
-        display: none;
-    }
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.herolabel {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    background: radial-gradient(#fff, #4D5B97);
+    border: 1px solid rgba(0, 0, 0, .75);
+    padding: 1.5rem;
+    box-shadow: 0 0 3rem #fff;
+    opacity: 0.75;
+    max-width: calc(100% - 60px); /* Added to prevent text wrapping */
+}
+
+.herolabel p {
+    margin: 0;
+    padding: .25rem;
+    font-weight: 700;
+    font-size: 1.5rem;
+    font-family: "Great Vibes", serif;
+    white-space: nowrap; /* Prevent text wrapping */
 }
