@@ -1,27 +1,20 @@
 document.addEventListener("DOMContentLoaded", function() {
-    let lazyImages = document.querySelectorAll('.lazy');
+  const images = document.querySelectorAll('.lazyload');
 
-    const lazyLoad = target => {
-        const io = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const img = entry.target;
-                    const src = img.getAttribute('data-src');
-                    img.setAttribute('src', src);
-                    img.classList.add('fade-in');
-                    img.classList.remove('lazy');
-                    observer.disconnect();
-                }
-            });
-        });
+  const lazyLoad = function() {
+      images.forEach(image => {
+          if (image.getAttribute('data-src') && image.getBoundingClientRect().top <= window.innerHeight && image.getBoundingClientRect().bottom >= 0) {
+              image.src = image.getAttribute('data-src');
+              image.removeAttribute('data-src');
+              image.onload = function() {
+                  image.style.opacity = 1;
+              };
+          }
+      });
+  };
 
-        io.observe(target);
-    };
+  window.addEventListener('scroll', lazyLoad);
 
-    lazyImages.forEach(lazyLoad);
-
-    // Last modified date
-    const lastModified = new Date(document.lastModified);
-    const lastModifiedElement = document.getElementById('lastModified');
-    lastModifiedElement.textContent = `Last Modified: ${lastModified.toLocaleString()}`;
+  // Initial load check
+  lazyLoad();
 });

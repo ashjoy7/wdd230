@@ -3,23 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lazy Load Images</title>
+    <title>Lazy Loading Images</title>
     <link rel="stylesheet" href="styles/lazyload.css">
 </head>
 <body>
     <header>
-        <h1>Lazy Load Images</h1>
+        <h1>Lazy Loading Images</h1>
     </header>
     <main>
-        <img src="images/cuddlefish.jpg" data-src="image1.jpg" alt="Image 1" class="lazy">
-        <img src="images/bulbasaur.jpg" data-src="image2.jpg" alt="Image 2" class="lazy">
-        <img src="images/can-i-help-you.png" data-src="image3.jpg" alt="Image 3" class="lazy">
-        <img src="images/haku.jpg" data-src="image4.jpg" alt="Image 4" class="lazy">
-        <img src="images/scarlett.jpg" data-src="image5.jpg" alt="Image 5" class="lazy">
-        <img src="images/turtle-duck.jpg" data-src="image6.jpg" alt="Image 6" class="lazy">
+        <img data-src="images/bulbasaur.jpg" class="lazyload" alt="Image 1">
+        <img data-src="images/can-i-help-you.png" class="lazyload" alt="Image 2">
+        <img data-src="images/cuddlefish.jpg" class="lazyload" alt="Image 3">
+        <img data-src="images/haku.jpg" class="lazyload" alt="Image 4">
+        <img data-src="images/scarlett.jpg" class="lazyload" alt="Image 5">
+        <img data-src="images/turtle-duck.jpg" class="lazyload" alt="Image 6">
     </main>
     <footer>
-        <p id="lastModified"></p>
+        Last modified: <span id="lastModified"></span>
     </footer>
     <script src="scripts/lazyload.js"></script>
 </body>
