@@ -1,62 +1,156 @@
-/* General styles */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-header, footer {
-    color: #FF8000;
-    padding: 20px 0;
-}
-
-nav ul {
-    list-style: none;
+/* Reset and base styles */
+body, html {
+    margin: 0;
     padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-/* Join Button styles */
-.button {
-    background-color: #0066CC;
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-}
-
-/* Hero section styles */
-.current-events, .weather, .spotlights{
-    background-color: #ffffff;
+    height: 100%;
+  }
+  
+  /* Grid layout for body */
+  body {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto;
-    grid-gap: 20px;
-}
-
-.grid-container {
-    display: flex;
-}
-
-.hero img {
+  }
+  
+  /* Styles for header */
+  header {
+    display: grid;
+    grid-template-rows: auto; /* Adjust grid rows for header */
+    gap: 1rem; /* Add gap between header elements */
+  }
+  
+  .container-hero-image {
+    position: relative;
+    width: 100%; /* Ensure the container fills the entire width */
+  }
+  
+  .hero-image {
+    display: block;
     width: 100%;
     height: auto;
-}
-
-/* Custom styles for headings and links */
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Courgette', cursive;
-    color: #FF8000;
-}
-
-a {
-    color: #0066CC;
-}
-
-main p {
-    font-family: 'Roboto';
-    color: #0066CC;
-}
+  }
+  
+  .hero-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #FF8000; /* Adjust the color according to your design */
+    width: 80%; /* Adjust width relative to the parent container */
+    max-width: 400px; /* Set maximum width to ensure it doesn't become too large */
+  }
+  
+  .wrapper-title {
+    display: grid;
+    grid-template-columns: auto; /* Change to single column for mobile view */
+    justify-content: center; /* Center align content */
+    gap: 0.5rem; /* Adjust gap between elements */
+  }
+  
+  .site-title {
+    font-family: 'Courgette';
+    font-size: 1.5rem; /* Adjust font size for site title */
+    text-shadow: -1px -1px 0 rgb(0, 0, 0), 1px -1px 0 rgb(0, 0, 0), -1px 1px 0 rgb(0, 0, 0), 1px 1px 0 rgb(0, 0, 0);
+    text-align: center; /* Center align site title */
+  }
+  
+  .join-button {
+    border: none;
+    outline: 2px solid black;
+    padding: 1rem;
+    color: rgb(255, 255, 255);
+    background-color: #0066CC;
+    cursor: pointer;
+    font-size: 1.5rem; /* Adjust font size for join button */
+    font-family: Roboto;
+  }
+  
+  .join-button:hover {
+    background-color: #FF8000;
+    color: white;
+  }
+  
+  /* Main content styles */
+  .main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem; /* Add padding for spacing */
+  }
+  
+  /* Navigation styles */
+  .nav {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns */
+    gap: 2rem; /* Adjust gap between columns */
+  }
+  
+  /* Container for main content */
+  .container-main {
+    display: grid;
+    grid-template-columns: 1fr; /* For mobile view, single column */
+    gap: 2rem; /* Adjust gap between columns */
+  }
+  
+  /* Sidebar styles */
+  .sidebar,
+  .gallery {
+    width: 100%; /* Make sidebar and gallery take full width in mobile view */
+  }
+  
+  .sidebar {
+    display: grid;
+    grid-template-rows: auto; /* Rows for sidebar widgets */
+    gap: 1rem; /* Adjust gap between rows */
+  }
+  
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns for gallery in mobile view */
+    gap: 1rem; /* Adjust gap between gallery items */
+  }
+  
+  /* Media query for mobile view */
+  @media (min-width: 768px) {
+    /* Adjust header styles for mobile view */
+    header {
+      padding: 1rem; /* Add padding for spacing */
+    }
+  
+    .container-hero-overlay {
+      padding: 0; /* Remove padding for overlay in mobile view */
+    }
+  
+    .wrapper-title {
+      grid-template-columns: 2fr auto; /* Adjust title and button column ratio */
+    }
+  
+    .site-title {
+      font-size: 1.5rem; /* Adjust font size for site title */
+      text-align: left; /* Align site title to left for desktop view */
+    }
+  
+    .join-button {
+      font-size: 1.5rem; /* Adjust font size for join button */
+    }
+  
+    .container-nav {
+      display: none; /* Hide navigation for mobile view */
+    }
+  
+    .container-main {
+      grid-template-columns: 1fr 3fr; /* Sidebar and gallery columns */
+    }
+  
+    .sidebar,
+    .gallery {
+      width: auto; /* Revert to auto width for desktop view */
+    }
+  }
+  
+  /* Media query for mobile view */
+@media (max-width: 768px) {
+    .hero-overlay {
+      width: 90%; /* Adjust width for smaller screens */
+      max-width: none; /* Remove max-width for smaller screens */
+    }
+  }
