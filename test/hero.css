@@ -1,4 +1,12 @@
 /* Reset and base styles */
+
+
+header {
+	max-width: 100vw;
+	margin: 0 auto;
+}
+
+
 body, html {
   margin: 0;
   padding: 0;
@@ -22,9 +30,10 @@ header {
   width: 100%; /* Ensure the container fills the entire width */
 }
 
+
 .hero-image {
   display: block;
-  width: 100%;
+  max-width: 100%;
   height: auto;
 }
 
@@ -37,11 +46,22 @@ header {
   color: #FF8000; /* Adjust the color according to your design */
 }
 
-.wrapper-title {
+.hero-overlay {
   display: grid;
   grid-template-columns: auto; /* Change to single column for mobile view */
   justify-content: center; /* Center align content */
-  gap: 0.5rem; /* Adjust gap between elements */
+  gap: 10vw; /* Adjust gap between elements */
+}
+
+.wrapper-title {
+  max-width: 100%; /* Set maximum width to 100% */
+  margin: 0 auto; /* Center the wrapper horizontally */
+}
+
+@media (min-width: 768px) {
+  .wrapper-title {
+    max-width: 768px; /* Adjust the maximum width for larger screens */
+  }
 }
 
 .site-title {
@@ -54,11 +74,11 @@ header {
 .join-button {
   border: none;
   outline: 2px solid black;
-  padding: 1rem;
+  padding: .5rem;
   color: rgb(255, 255, 255);
   background-color: #0066CC;
   cursor: pointer;
-  font-size: 1.5rem; /* Adjust font size for join button */
+  font-size: .1rem; /* Adjust font size for join button */
   font-family: Roboto;
 }
 
@@ -111,11 +131,7 @@ header {
 @media (min-width: 768px) {
   /* Adjust header styles for mobile view */
   header {
-    padding: 1rem; /* Add padding for spacing */
-  }
-
-  .container-hero-overlay {
-    padding: 0; /* Remove padding for overlay in mobile view */
+    padding: 0; /* Add padding for spacing */
   }
 
   .wrapper-title {
@@ -123,12 +139,12 @@ header {
   }
 
   .site-title {
-    font-size: 1.5rem; /* Adjust font size for site title */
+    font-size: 1rem; /* Adjust font size for site title */
     text-align: left; /* Align site title to left for desktop view */
   }
 
   .join-button {
-    font-size: 1.5rem; /* Adjust font size for join button */
+    font-size: 1rem; /* Adjust font size for join button */
   }
 
   .container-nav {
