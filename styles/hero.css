@@ -18,7 +18,7 @@ main {
 	object-fit: cover;
 }
 
-.herolabel {
+.herotext{
 	position: absolute;
 	top: 30px;
 	left: 30px;
@@ -30,7 +30,7 @@ main {
 	/* Buenas */
 }
 
-.herolabel p {
+.herotext p {
 	margin: 0;
 	padding: .25rem;
 	font-weight: 700;

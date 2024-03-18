@@ -176,7 +176,7 @@ button#mode {
     object-fit: cover;
 }
 
-.herolabel {
+.herotext {
     position: absolute;
     top: 30px;
     left: 30px;
@@ -188,7 +188,7 @@ button#mode {
     max-width: calc(100% - 60px); /* Added to prevent text wrapping */
 }
 
-.herolabel p {
+.herotext p {
     margin: 0;
     padding: .25rem;
     font-weight: 700;
