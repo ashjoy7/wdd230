@@ -3,69 +3,111 @@ body, html {
     margin: 0;
     padding: 0;
     height: 100%;
-  }
-  
-  /* Grid layout for body */
-  body {
-    display: grid;
-  }
-  
-  /* Styles for header */
-  header {
-    display: grid;
-    grid-template-rows: auto; /* Adjust grid rows for header */
-    gap: 1rem; /* Add gap between header elements */
-  }
+}
 
-  header {
+/* Grid layout for body */
+body {
+    display: grid;
+}
+
+/* Styles for header */
+header {
     position: relative;
     text-align: center;
 }
 
 .hero-container {
     position: relative;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    width: 100%;
     padding: 10px;
     box-sizing: border-box;
 }
 
 .hero-image {
+    display: block;
     width: 100%;
     height: auto;
     z-index: -1;
 }
 
 .hero-content {
-    position:absolute;
-    display: grid;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    text-align: center;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: grid;
+    grid-template-columns: 1fr; /* Single column for mobile */
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     color: #fff;
-    width: 100%;
-    height: auto;
+    padding: 20px;
+    box-sizing: border-box;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .site-title, .social-links, .join-button {
     text-align: center;
+    margin: 10px 0; /* Added spacing */
+}
+
+.site-title h1 {
+    font-size: 6vw; /* Responsive font size for smaller screens */
+    color: #FF8000;
+    font-family: 'Courgette', sans-serif;
 }
 
 .join-button {
     border: none;
-    width: auto; /* Adjust button width */
-    padding: 8px 16px; /* Adjust button padding */
-    background-color: #4CAF50; /* Green background */
+    padding: 8px 16px;
+    background-color: #4CAF50;
     color: white;
-    border: none;
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
 .join-button:hover {
-    background-color: #45a049; /* Darker green on hover */
+    background-color: #45a049;
+}
+
+/* Main content and other styles omitted for brevity */
+
+/* Media queries for adjustments on larger screens */
+@media (min-width: 768px) {
+    .hero-content {
+        grid-template-columns: repeat(3, 1fr); /* 3-column layout for wider screens */
+    }
+
+    .site-title h1 {
+        font-size: 2.5rem; /* Fixed font size for larger screens */
+    }
+}
+
+/* Sidebar, gallery, and other responsive adjustments */
+.sidebar,
+.gallery {
+    width: 100%;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+@media (min-width: 768px) {
+    .container-main {
+        display: grid;
+        grid-template-columns: 1fr 3fr; /* Adjust layout for larger screens */
+    }
+
+    .sidebar, .gallery {
+        width: auto;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns for the gallery on wider screens */
+    }
 }
