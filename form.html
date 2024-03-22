@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashley Egan - WDD 230 - Web Frontend Development</title>
+    <meta name="description" content="Ashley Egan's course assignment portal for WDD 230 - Web Frontend Development. Explore various projects including Holy Grail and Media Query.">
+    <meta name="author" content="Ashley Egan">
+
+    <!-- Open Graph meta properties -->
+    <meta property="og:title" content="Ashley Egan - WDD 230 - Web Frontend Development">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://visit.sierravistaaz.gov/home/showpublishedimage/1380/637843175379000000">
+    <meta property="og:url" content="https://ashjoy7.github.io/wdd230/">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <link rel="stylesheet" href="styles/darkmode.css">
+    <link rel="stylesheet" href="styles/hero.css">
+    <link rel="stylesheet" href="styles/hero-mobile.css">
+    <link rel="stylesheet" href="styles/form.css"> <!-- Added link to form styles -->
+
+    <script src="scripts/hamburger.js" defer></script>
+    <script src="scripts/darkmode.js" defer></script>
+
+    <link rel="icon" href="favicon.ico">
+
+    <style>
+        /* Additional CSS to adjust the size of the map iframe */
+        iframe.map {
+            width: 100%;
+            height: 300px; /* Adjust the height as needed */
+            border: none; /* Remove border */
+            margin-bottom: 20px; /* Add some spacing */
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="images/profile.webp" alt="Ashley Egan Profile Picture" loading="lazy">
+        <span>Ashley Egan</span>
+        <button id="mode">🕶️</button> <!-- Move the dark mode button inside the header -->
+        <button id="hamburger">&#8801;</button> <!-- Move the hamburger button inside the header -->
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="chamber/discover.html">Chamber</a></li>
+            <li><a href="week01/chamber-site-plan.html">Site Plan</a></li>
+            <li><a href="form.html">Form</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="hero">
+            <div class="hero">
+                <picture>
+                    <!-- For mobile view -->
+                    <source srcset="images/hero-small.webp" media="(max-width: 400px)">
+                    <!-- For larger views -->
+                    <source srcset="images/hero-large.webp" media="(min-width: 401px)">
+                    <!-- Fallback image for non-supporting browsers -->
+                    <img src="path/to/temple_fallback.jpg" alt="Temple Image" loading="lazy">
+                </picture>
+                <div class="herotext">
+                    <p>Mesa Arizona Temple</p>
+                </div>    
+            </div>            
+        </div>
+        <h1>WDD 230 Web Frontend Development</h1>
+        
+        <!-- Form added here -->
+        <form action="record.html" method="get">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required><br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" pattern="[A-Za-z0-9]{8,}" required><br>
+
+            <label for="confirm_password">Confirm Password:</label>
+            <input type="password" id="confirm_password" name="confirm_password" required><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" pattern="[a-zA-Z0-9._%+-]+@byui\.edu$" required title="Please enter a valid email address"><br>
+
+            <label for="rating">Page Rating:</label>
+            <input type="range" id="rating" name="rating" min="1" max="10" step="1"><br>
+
+            <span id="password_error" class="error"></span><br> <!-- Error message span -->
+            <input type="submit" value="Submit">
+        </form>
+    </main>
+
+    <!-- Embedded Google Map -->
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13321.606250992538!2d-111.8196963!3d33.4127737!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872ba7d05518c717%3A0x7d4718ad7510c9f7!2sMesa%20Arizona%20Temple!5e0!3m2!1sen!2sus!4v1710367971759!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    <footer>
+        <p>&copy; Ashley Egan - WDD 230 </p>
+        <p>Washington | USA</p>
+        <p id="lastModified">Last modified: </p>
+    </footer>
+
+    <script src="scripts/getDates.js" defer></script>
+    <script src="scripts/visitCounter.js" defer></script>
+</body>
+
+</html>

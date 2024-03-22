@@ -1,0 +1,35 @@
+/* styles/form.css */
+
+/* Define CSS variables */
+:root {
+    --form-label-color: #333;
+    --form-input-bg: #f4f4f4;
+    --form-input-border: #ccc;
+}
+
+/* Form styles */
+form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+label {
+    color: var(--form-label-color);
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="range"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid var(--form-input-border);
+    background-color: var(--form-input-bg);
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background-color: #4caf50
