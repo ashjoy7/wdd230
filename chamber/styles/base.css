@@ -154,3 +154,54 @@ body, html {
       max-width: none; /* Remove max-width for smaller screens */
     }
   }
+
+:root {
+  --form-label-color: #333;
+  --form-input-bg: #f4f4f4;
+  --form-input-border: #ccc;
+}
+
+form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+label {
+  color: var(--form-label-color);
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="lastName"],
+input[type="position"],
+input[type="password"],
+input[type="email"],
+input[type="mobile"],
+input[type="businessName"],
+input[type="membershipLevel"],
+input[type="description"],
+
+textarea,
+select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid var(--form-input-border);
+  background-color: var(--form-input-bg);
+  border-radius: 5px;
+}
+
+input[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
