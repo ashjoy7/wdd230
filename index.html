@@ -19,7 +19,6 @@
     <link rel="stylesheet" href="styles/large.css">
     <link rel="stylesheet" href="styles/darkmode.css">
     <link rel="stylesheet" href="styles/hero.css">
-    <link rel="stylesheet" href="styles/hero-mobile.css">
 
     <script src="scripts/hamburger.js" defer></script>
     <script src="scripts/darkmode.js" defer></script>
@@ -47,19 +46,17 @@
 
     <main>
         <div class="hero">
-            <div class="hero">
-                <picture>
-                    <!-- For mobile view -->
-                    <source srcset="images/hero-small.webp" media="(max-width: 400px)">
-                    <!-- For larger views -->
-                    <source srcset="images/hero-large.webp" media="(min-width: 401px)">
-                    <!-- Fallback image for non-supporting browsers -->
-                    <img src="path/to/temple_fallback.jpg" alt="Temple Image" loading="lazy">
-                </picture>
-                <div class="herotext">
-                    <p>Mesa Arizona Temple</p>
-                </div>    
-            </div>            
+            <picture>
+                <!-- For mobile view -->
+                <source srcset="images/hero-small.webp" media="(max-width: 400px)">
+                <!-- For larger views -->
+                <source srcset="images/hero-large.webp" media="(min-width: 401px)">
+                <!-- Fallback image for non-supporting browsers -->
+                <img src="path/to/temple_fallback.jpg" alt="Temple Image" loading="lazy">
+            </picture>
+            <div class="herotext">
+                <p>Mesa Arizona Temple</p>
+            </div>    
         </div>
         <h1>WDD 230 Web Frontend Development</h1>
         <div class="parent">
@@ -118,17 +115,4 @@
     </main>
 
     <!-- Embedded Google Map -->
-    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13321.606250992538!2d-111.8196963!3d33.4127737!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872ba7d05518c717%3A0x7d4718ad7510c9f7!2sMesa%20Arizona%20Temple!5e0!3m2!1sen!2sus!4v1710367971759!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-    <footer>
-        <p>&copy; Ashley Egan - WDD 230 </p>
-        <p>Washington | USA</p>
-        <p id="lastModified">Last modified: </p>
-    </footer>
-
-    <script src="scripts/getDates.js" defer></script>
-    <script src="scripts/visitCounter.js" defer></script>
-    <script src="scripts/weather.js" defer></script>
-</body>
-
-</html>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13321.606250992538!2d-111.8196963!3d33.4127737!3m2!1i1024!2i768!4f13.1!3m3
