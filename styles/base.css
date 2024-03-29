@@ -196,3 +196,12 @@ button#mode {
     font-family: "Great Vibes", serif;
     white-space: nowrap; /* Prevent text wrapping */
 }
+
+
+ /* Additional CSS to adjust the size of the map iframe */
+ iframe.map {
+    width: 100%;
+    height: 300px; /* Adjust the height as needed */
+    border: none; /* Remove border */
+    margin-bottom: 20px; /* Add some spacing */
+}
