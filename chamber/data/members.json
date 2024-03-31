@@ -1,0 +1,23 @@
+{
+    "members": [
+      {
+        "name": "Company 1",
+        "address": "123 Main St, City, State",
+        "phone": "123-456-7890",
+        "website": "https://www.example.com",
+        "image": "company1.jpg",
+        "membership_level": "Gold",
+        "other_info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      },
+      {
+        "name": "Company 2",
+        "address": "456 Elm St, City, State",
+        "phone": "234-567-8901",
+        "website": "https://www.example.com",
+        "image": "company2.jpg",
+        "membership_level": "Silver",
+        "other_info": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      }
+    ]
+  }
+  
