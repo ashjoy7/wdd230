@@ -18,41 +18,42 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Roboto&display=swap" rel="stylesheet">
     <!-- External CSS -->
-    <link rel="stylesheet" href="styles/base.css">
-    <link rel="stylesheet" href="styles/larger.css">
-    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="hero1.css">
+    <link rel="stylesheet" href="directory.css">
     <link rel="icon" href="favicon.ico">
 </head>
 <body>
     <header>
-        <div class="container-hero-image">
-            <img class="hero-image" src="images/huachuca-mountains.jpg">
-            <div class="container-hero-overlay">
-                <div class="hero-overlay">
-                    <div class="wrapper-title">
-                        <div class="site-title">
-                                <h1>Huachuca City</h1>
-                                <h1>Chamber of Commerce</h1>
-                        </div>
-                        <button class="join-button"><a href="join.html">Join</a></button>
-                    </div>
+        <div class="hero-container">
+            <img class="hero-image" src="huachuca-mountains.jpg" alt="Huachuca Mountains">
+            <div class="hero-content">
+                <div class="site-title">
+                    <h1>Huachuca City</h1>
+                    <h1>Chamber of Commerce</h1>
                 </div>
+                <div class="social-links">
+                    <a href="#">Social Link</a>
+                </div>
+                <button class="join-button"><a href="join.html">Join</a></button>
             </div>
         </div>
-        <div class="container-nav">
-        </div>
-
     </header>
+
+    <nav>
+        <ul>
+            <li><a href="index-test.html">Home</a></li>
+            <li><a href="discover.html">Discover</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="form.html">Form</a></li>
+        </ul>
+    </nav>
+
     <main>
-        <div class="menu">
-            <button id="grid">⏹️ Grid</button>
-            <button id="list">📄 List</button>
-        </div>
-        <hr>
-        <article id="members">
-            <!-- Member information will be dynamically inserted here -->
-        </article>
-    </main>    
+        <button id="grid">⏹️ Grid</button>
+        <button id="list">📄 List</button>
+        <div id="container"></div>
+    </main>
+     
     
     <footer>
         <div class="container">
@@ -61,8 +62,8 @@
         </div>
     </footer>
     <!-- External JavaScript for last modified date -->
-    <script src="scripts/getDates.js"></script>
+    <script src="getDates.js"></script>
     <!-- External JavaScript for directory functionality -->
-    <script src="scripts/directory.js"></script>
+    <script src="directory.js"></script>
 </body>
 </html>
