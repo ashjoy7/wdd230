@@ -1,46 +1,55 @@
-const gridButton = document.querySelector("#grid");
-const listButton = document.querySelector("#list");
-const membersContainer = document.getElementById("members");
+const container = document.getElementById('container');
 
-// Fetch member data from JSON file
-fetch("data/members.json")
-    .then(response => response.json())
-    .then(data => {
-        // Display member data in grid view by default
-        displayMembers(data.members, "grid");
-        
-        // Add event listeners to buttons
-        gridButton.addEventListener("click", () => displayMembers(data.members, "grid"));
-        listButton.addEventListener("click", () => displayMembers(data.members, "list"));
-    })
-    .catch(error => console.error("Error fetching member data:", error));
-
-// Function to display members based on view type
-function displayMembers(members, viewType) {
-    membersContainer.innerHTML = ""; // Clear previous content
-
-    members.forEach(member => {
-        const section = document.createElement("section");
-        const img = document.createElement("img");
-        const h3 = document.createElement("h3");
-        const p = document.createElement("p");
-        const a = document.createElement("a");
-
-        img.src = member.image;
-        img.alt = member.name;
-        h3.textContent = member.name;
-        p.textContent = `Address: ${member.address}, Phone: ${member.phone}, Website: ${member.website}`;
-        a.href = member.website;
-        a.textContent = "Visit Website";
-
-        section.appendChild(img);
-        section.appendChild(h3);
-        section.appendChild(p);
-        section.appendChild(a);
-
-        membersContainer.appendChild(section);
+function displayGrid(companies) {
+    container.innerHTML = '';
+    companies.forEach(company => {
+        const card = document.createElement('div');
+        card.classList.add('card');
+        card.innerHTML = `
+            <img src="${company.image}" alt="${company.name}">
+            <h3>${company.name}</h3>
+            <p><strong>Address:</strong> ${company.address}</p>
+            <p><strong>Phone:</strong> ${company.phone}</p>
+            <p><strong>Website:</strong> <a href="${company.website}" target="_blank">${company.website}</a></p>
+            <p><strong>Membership Level:</strong> ${company.membership_level}</p>
+            <p>${company.other_info}</p>
+        `;
+        container.appendChild(card);
     });
-
-    // Toggle grid/list view
-    membersContainer.className = viewType;
 }
+
+function displayList(companies) {
+    container.innerHTML = '';
+    const list = document.createElement('ul');
+    companies.forEach(company => {
+        const listItem = document.createElement('li');
+        listItem.innerHTML = `
+            <h3>${company.name}</h3>
+            <p><strong>Address:</strong> ${company.address}</p>
+            <p><strong>Phone:</strong> ${company.phone}</p>
+            <p><strong>Website:</strong> <a href="${company.website}" target="_blank">${company.website}</a></p>
+            <p><strong>Membership Level:</strong> ${company.membership_level}</p>
+            <p>${company.other_info}</p>
+        `;
+        list.appendChild(listItem);
+    });
+    container.appendChild(list);
+}
+
+document.getElementById('grid').addEventListener('click', async () => {
+    const response = await fetch('data/members.json');
+    const companies = await response.json();
+    displayGrid(companies);
+});
+
+document.getElementById('list').addEventListener('click', async () => {
+    const response = await fetch('data/members.json');
+    const companies = await response.json();
+    displayList(companies);
+});
+
+// Display grid by default
+fetch('data/members.json')
+    .then(response => response.json())
+    .then(companies => displayGrid(companies))
+    .catch(error => console.error('Error fetching data:', error));

@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    fetch("members.json")
+    fetch("data/members.json")
         .then(response => response.json())
         .then(data => {
             // Filter members with silver or gold membership levels

@@ -4,92 +4,100 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Welcome to the Huachuca City Chamber of Commerce.">
-    <title>Chamber of Commerce Home Page</title>
+    <title>Chamber of Commerce Join Page</title>
     <meta name="author" content="Ashley Egan">
 
-     <!-- Open Graph meta properties -->
-     <meta property="og:title" content="Ashley Egan - WDD 230 - Chamber Site">
-     <meta property="og:type" content="website">
-     <meta property="og:image" content="https://img1.wsimg.com/isteam/ip/58c32fbd-879f-43d6-bd44-5d1bcc943691/Huachuca%20City%20AZ%2001.JPG/:/cr=t:0%25,l:0%25,w:100%25,h:100%25">
-     <meta property="og:url" content="https://ashjoy7.github.io/wdd230/chamber/index.html">
+    <!-- Open Graph meta properties -->
+    <meta property="og:title" content="Ashley Egan - WDD 230 - Chamber Site">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://img1.wsimg.com/isteam/ip/58c32fbd-879f-43d6-bd44-5d1bcc943691/Huachuca%20City%20AZ%2001.JPG/:/cr=t:0%25,l:0%25,w:100%25,h:100%25">
+    <meta property="og:url" content="https://ashjoy7.github.io/wdd230/chamber/index.html">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Roboto&display=swap" rel="stylesheet">
     <!-- External CSS -->
-    <link rel="stylesheet" href="styles/base.css">
-    <link rel="stylesheet" href="styles/larger.css">
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles/hero.css">
+    <link rel="stylesheet" href="styles/join.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="icon" href="images/favicon.ico">
 </head>
 <body>
     <header>
-        <div class="container-hero-image">
-            <img class="hero-image" src="images/huachuca-mountains.jpg">
-            <div class="container-hero-overlay">
-                <div class="hero-overlay">
-                    <div class="wrapper-title">
-                        <div class="site-title">
-                                <h1>Huachuca City</h1>
-                                <h1>Chamber of Commerce</h1>
-                        </div>
-                        <button class="join-button">Join Our Newsletter!</button> 
+        <div class="hero-container">
+            <img class="hero-image" src="images/huachuca-mountains.jpg" alt="Huachuca Mountains">
+            <div class="hero-content">
+                <div class="site-title">
+                    <h1>
+                        <span class="main-title">Huachuca City</span><br>
+                        <span class="sub-title">Chamber of Commerce</span>
+                    </h1>
+                </div>                
+                <div class="social-links">
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/HuachucaCityAZ/" class="social-icon facebook-icon" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/AZLukaLee/status/1498479573192691717" class="social-icon twitter-icon" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/explore/tags/huachucacityarizona/" class="social-icon instagram-icon" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/watch?v=1cT0ugIWLXc&ab_channel=ArizonaPBS" class="social-icon youtube-icon" target="_blank"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
+                <a href="join.html" class="join-button">Become a Member!</a>
             </div>
-        </div>
-        <div class="container-nav">
-            <!-- Navigation content here -->
         </div>
     </header>
 
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="discover.html">Discover</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="form.html">Form</a></li>
+        </ul>
+    </nav>
+
     <main>
         <section class="container-main">
-            <!-- Main content erased -->
+            <form action="thankyou.html" method="get" class="form">
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName" required>
+
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName" required>
+
+                <label for="position">Title/Position:</label>
+                <input type="text" id="position" name="position" pattern="[a-zA-Z\s-]{7,}" required>
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="example@example.com" required>
+
+                <label for="mobile">Mobile:</label>
+                <input type="tel" id="mobile" name="mobile" placeholder="1234567890" required>
+
+                <label for="businessName">Business/Organization Name:</label>
+                <input type="text" id="businessName" name="businessName" required>
+
+                <label for="membershipLevel">Membership Level:</label>
+                <select id="membershipLevel" name="membershipLevel">
+                    <option value="NP">NP Membership (Free)</option>
+                    <option value="Bronze">Bronze Membership</option>
+                    <option value="Silver">Silver Membership</option>
+                    <option value="Gold">Gold Membership</option>
+                </select>
+
+                <label for="description">Business/Organization Description:</label>
+                <textarea id="description" name="description"></textarea>
+
+                <input type="hidden" id="timestamp" name="timestamp" value="">
+
+                <input type="submit" value="Finish Form">
+            </form>
         </section>
     </main>    
 
     <aside class="sidebar">
         <!-- Membership level benefits content here -->
     </aside>
-
-
-
-    <form action="thankyou.html" method="get">
-        <label for="firstName">Applicant's First Name:</label>
-        <input type="text" id="firstName" name="firstName" required><br>
-
-        <label for="lastName">Applicant's Last Name:</label>
-        <input type="text" id="lastName" name="lastName" required><br>
-
-        <label for="position">Applicant's Title/Position:</label>
-        <input type="text" id="position" name="position" pattern="[a-zA-Z\s-]{7,}" required><br>
-
-        <label for="email">Email Address:</label>
-        <input type="email" id="email" name="email" placeholder="example@example.com" required><br>
-
-        <label for="mobile">Mobile Phone Number:</label>
-        <input type="tel" id="mobile" name="mobile" placeholder="1234567890" required><br>
-
-        <label for="businessName">Business/Organization Name:</label>
-        <input type="text" id="businessName" name="businessName" required><br>
-
-        <label for="membershipLevel">Membership Level:</label>
-        <select id="membershipLevel" name="membershipLevel">
-            <option value="NP">NP Membership (Free)</option>
-            <option value="Bronze">Bronze Membership</option>
-            <option value="Silver">Silver Membership</option>
-            <option value="Gold">Gold Membership</option>
-        </select><br>
-
-        <label for="description">Business/Organization Description:</label>
-        <textarea id="description" name="description"></textarea><br>
-
-        <input type="hidden" id="timestamp" name="timestamp" value="">
-
-        <input type="submit" value="Finish Form">
-    </form>
 
     <footer>
         <div class="container">

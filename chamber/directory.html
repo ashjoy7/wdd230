@@ -18,41 +18,49 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Roboto&display=swap" rel="stylesheet">
     <!-- External CSS -->
-    <link rel="stylesheet" href="styles/base.css">
-    <link rel="stylesheet" href="styles/larger.css">
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles/hero.css">
+    <link rel="stylesheet" href="styles/directory.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="icon" href="images/favicon.ico">
 </head>
 <body>
     <header>
-        <div class="container-hero-image">
-            <img class="hero-image" src="images/huachuca-mountains.jpg">
-            <div class="container-hero-overlay">
-                <div class="hero-overlay">
-                    <div class="wrapper-title">
-                        <div class="site-title">
-                                <h1>Huachuca City</h1>
-                                <h1>Chamber of Commerce</h1>
-                        </div>
-                        <button class="join-button"><a href="join.html">Join</a></button>
+        <div class="hero-container">
+            <img class="hero-image" src="images/huachuca-mountains.jpg" alt="Huachuca Mountains">
+            <div class="hero-content">
+                <div class="site-title">
+                    <h1>
+                        <span class="main-title">Huachuca City</span><br>
+                        <span class="sub-title">Chamber of Commerce</span>
+                    </h1>
+                </div>                
+                <div class="social-links">
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/HuachucaCityAZ/" class="social-icon facebook-icon" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/AZLukaLee/status/1498479573192691717" class="social-icon twitter-icon" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/explore/tags/huachucacityarizona/" class="social-icon instagram-icon" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/watch?v=1cT0ugIWLXc&ab_channel=ArizonaPBS" class="social-icon youtube-icon" target="_blank"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
+                <a href="join.html" class="join-button">Become a Member!</a>
             </div>
         </div>
-        <div class="container-nav">
-        </div>
-
     </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="discover.html">Discover</a></li>
+            <li><a href="directory.html">Directory</a></li>
+        </ul>
+    </nav>
+
     <main>
-        <div class="menu">
-            <button id="grid">⏹️ Grid</button>
-            <button id="list">📄 List</button>
-        </div>
-        <hr>
-        <article id="members">
-            <!-- Member information will be dynamically inserted here -->
-        </article>
-    </main>    
+        <button id="grid">⏹️ Grid</button>
+        <button id="list">📄 List</button>
+        <div id="container"></div>
+    </main>
+     
     
     <footer>
         <div class="container">

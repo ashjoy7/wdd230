@@ -18,32 +18,50 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Roboto&display=swap" rel="stylesheet">
     <!-- External CSS -->
-    <link rel="stylesheet" href="styles/base.css">
-    <link rel="stylesheet" href="styles/larger.css">
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles/hero.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="icon" href="images/favicon.ico">
 </head>
 <body>
     <header>
-        <div class="container-hero-image">
-            <img class="hero-image" src="images/huachuca-mountains.jpg">
-            <div class="container-hero-overlay">
-                <div class="hero-overlay">
-                    <div class="wrapper-title">
-                        <div class="site-title">
-                                <h1>Huachuca City</h1>
-                                <h1>Chamber of Commerce</h1>
-                        </div>
-                        <nav class="header-nav">
-                            <button class="join-button"><a href="join.html">Join</a></button>
-                        </nav>
+        <div class="hero-container">
+            <img class="hero-image" src="images/huachuca-mountains.jpg" alt="Huachuca Mountains">
+            <div class="hero-content">
+                <div class="site-title">
+                    <h1>
+                        <span class="main-title">Huachuca City</span><br>
+                        <span class="sub-title">Chamber of Commerce</span>
+                    </h1>
+                </div>                
+                <div class="social-links">
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/HuachucaCityAZ/" class="social-icon facebook-icon" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/AZLukaLee/status/1498479573192691717" class="social-icon twitter-icon" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/explore/tags/huachucacityarizona/" class="social-icon instagram-icon" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/watch?v=1cT0ugIWLXc&ab_channel=ArizonaPBS" class="social-icon youtube-icon" target="_blank"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
+                <a href="join.html" class="join-button">Become a Member!</a>
             </div>
         </div>
-        <div class="container-nav">
-        </div>
     </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="discover.html">Discover</a></li>
+            <li><a href="directory.html">Directory</a></li>
+        </ul>
+    </nav>
+
+    <!-- Banner Section -->
+    <section class="banner" id="banner">
+        <div class="banner-content">
+            <p>Join us for the Chamber of Commerce meet and greet on Wednesday at 7:00 p.m.</p>
+            <button onclick="closeBanner()">Close</button>
+        </div>
+    </section>
+
     <main>
         <section class="container-main">
             <aside class="sidebar">
@@ -54,47 +72,30 @@
                     <h2>Current Events</h2>
                     <p>Placeholder content for current events.</p>
                 </div>
-                <div class="weather">
-                    <h2>Weather</h2>
-                    <p>Placeholder content for weather information.</p>
+                <div class="weather-card">
+                    <section class="card">
+                        <h2>Weather</h2>
+                        <p>Weather: <span id="current-temp"></span>&deg;F, <span id="weather-desc"></span></p>
+                        <img id="weather-icon" src="" alt="Weather Icon">
+                        <div class="forecast"></div>
+                        <p>Number of visits: <span id="visitCounter">0</span></p>
+                    </section>
                 </div>
+                
                 <div class="calendar">
                     <h2>Calendar</h2>
-                    <p>Placeholder content for calendar.</p>
+                    <div id="calendar"></div>
                 </div>
             </aside>
-            <div class="gallery">
-                <div class="gallery-item">
-                    <img src="placeholder1.jpg" alt="Placeholder Image 1" loading="lazy">
-                    <div class="image-caption">Caption 1</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="placeholder2.jpg" alt="Placeholder Image 2" loading="lazy">
-                    <div class="image-caption">Caption 2</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="placeholder3.jpg" alt="Placeholder Image 3" loading="lazy">
-                    <div class="image-caption">Caption 3</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="placeholder4.jpg" alt="Placeholder Image 4" loading="lazy">
-                    <div class="image-caption">Caption 4</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="placeholder5.jpg" alt="Placeholder Image 5" loading="lazy">
-                    <div class="image-caption">Caption 5</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="placeholder6.jpg" alt="Placeholder Image 6" loading="lazy">
-                    <div class="image-caption">Caption 6</div>
-                </div>
+            <div class="spotlight-advertisements">
+                <!-- Spotlight advertisements will be dynamically inserted here -->
             </div>
         </section>
     </main>    
     
     <footer>
         <div class="container">
-            <p>Contact Information: Your Contact Info</p>
+            <p>Contact Information: ashjoy7@gmail.com</p>
             <p>Developed by Ashley Egan for WDD 230. Last modified: <span id="lastModified"></span></p>
         </div>
     </footer>
@@ -102,5 +103,13 @@
     <script src="scripts/getDates.js"></script>
     <!-- External JavaScript for hamburger menu -->
     <script src="scripts/welcome.js"></script>
+    <script src="scripts/weather.js"></script>
+    <script src="scripts/ads.js"></script>
+    <script src="scripts/calendar.js"></script>
+    <script>
+        function closeBanner() {
+            document.getElementById('banner').style.display = 'none';
+        }
+    </script>
 </body>
 </html>
