@@ -1,0 +1,25 @@
+.weather-card {
+    margin: 20px auto;
+}
+
+.card {
+    border: 3px solid #5e2692;
+    background-color: #e4f7fc;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.card h2 {
+    color: #5e2692;
+}
+
+.card p {
+    color: #5e2692;
+}
+
+.card img {
+    display: block;
+    margin: 0 auto;
+    width: 50px;
+}

@@ -47,16 +47,29 @@ header {
     margin: 0 auto;
 }
 
-.site-title, .social-links, .join-button {
+/* Style for the site title */
+.site-title {
     text-align: center;
     margin: 10px 0; /* Added spacing */
 }
 
-.site-title h1 {
-    font-size: 6vw; /* Responsive font size for smaller screens */
+/* Style for the main title part */
+.site-title .main-title {
+    font-size: 4vw; /* Responsive font size for smaller screens */
     color: #000000;
     font-family: 'Courgette', sans-serif;
+    -webkit-text-stroke: .1px white; /* White border around the text */
 }
+
+/* Style for the sub title part */
+.site-title .sub-title {
+    font-size: 2vw; /* Responsive font size for smaller screens */
+    color: #000000;
+    font-family: 'Roboto', sans-serif; /* Using Roboto font for this part */
+    -webkit-text-stroke: .01px white; /* White border around the text */
+}
+
+
 
 .social-links a {
     color: black;
@@ -70,16 +83,16 @@ header {
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s;
+    font-family: Roboto;
 }
 
 .join-button:hover {
-    background-color: #45a049;
+    background-color: #0066CC;
 }
 
 .join-button a {
     color: black;
 }
-
 
 /* Media queries for adjustments on larger screens */
 @media (min-width: 768px) {
@@ -93,27 +106,32 @@ header {
 }
 
 /* Sidebar, gallery, and other responsive adjustments */
-.sidebar,
-.gallery {
-    width: 100%;
+.container-main {
+    display: grid;
+    grid-template-columns: 1fr 3fr; /* Adjust layout for larger screens */
+}
+
+.sidebar {
+    width: 200px; /* Adjust the width of the sidebar */
+    padding: 20px; /* Add padding */
+    margin: 20px; /* Add margin */
+    border: 1px solid #ccc; /* Add border */
+}
+
+
+.sidebar > div {
+    margin-bottom: 10px; /* Add space between elements */
+    
 }
 
 .gallery {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
+    margin-top: 20px;
 }
 
 @media (min-width: 768px) {
-    .container-main {
-        display: grid;
-        grid-template-columns: 1fr 3fr; /* Adjust layout for larger screens */
-    }
-
-    .sidebar, .gallery {
-        width: auto;
-    }
-
     .gallery {
         grid-template-columns: repeat(3, 1fr); /* 3 columns for the gallery on wider screens */
     }
@@ -121,6 +139,7 @@ header {
 
 nav {
     background-color: #ffffff; /* Optional: Change background color */
+    margin-bottom: 20px; /* Add space underneath the nav */
 }
 
 nav ul {
@@ -139,13 +158,184 @@ nav ul li:last-child {
 }
 
 nav ul li a {
-    color: #000000; /* Optional: Change text color */
+    color: #000000; /* Set default text color */
     text-decoration: none;
     font-size: 18px; /* Optional: Adjust font size */
+    font-family: Roboto;
     padding: 10px 15px; /* Optional: Adjust padding */
     border-radius: 5px; /* Optional: Add rounded corners */
+    transition: color 0.3s; /* Smooth transition for color change */
 }
 
 nav ul li a:hover {
+    color: #ffffff; /* Change text color to white on hover */
     background-color: #0066CC; /* Optional: Change background color on hover */
+}
+
+
+/* Adjust layout for larger screens */
+.container-main {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Left side takes up 1/3, right side takes up 2/3 */
+}
+
+
+/* Styles for spotlight advertisements */
+.spotlight-advertisements {
+    grid-column: 2; /* Position the spotlight advertisements in the second column */
+    padding: 0px; /* Add padding */
+    margin-top: 20px; /* Add space between sidebar and spotlight advertisements */
+}
+
+/* Media query for adjustments on larger screens */
+@media (min-width: 768px) {
+    .spotlight-advertisements {
+        padding: 40px; /* Increase padding for larger screens */
+    }
+}
+
+.banner {
+    background-color: #FF8000;
+    padding: 20px;
+    text-align: center;
+    font-family: Roboto;
+}
+
+.banner-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.banner button {
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.banner button:hover {
+    background-color: #cc0000;
+}
+
+.social-links {
+    text-align: center;
+    margin: 10px 0; /* Added spacing */
+}
+
+.social-icon {
+    display: inline-block;
+    margin: 0 10px; /* Adjust spacing between icons */
+    padding: 10px; /* Padding around icons */
+    background-color: #FF8000; /* Orange background */
+    border-radius: 4px; /* Rounded corners */
+}
+
+.social-icon i {
+    color: black; /* Black icon color */
+    font-size: 20px; /* Icon size */
+    transition: color 0.3s; /* Smooth transition for color change */
+}
+
+.social-icon:hover i {
+    color: #ffffff; /* White icon color on hover */
+}
+
+/* Styles for individual icons */
+.facebook-icon:hover {
+    background-color: #0066CC; /* Facebook color on hover */
+}
+
+.twitter-icon:hover {
+    background-color: #0066CC; /* Twitter color on hover */
+}
+
+.instagram-icon:hover {
+    background-color: #0066CC; /* Instagram color on hover */
+}
+
+.youtube-icon:hover {
+    background-color: #0066CC; /* YouTube color on hover */
+}
+
+/* Your existing CSS */
+
+/* Add Courgette font to h2 elements in the weather card */
+.sidebar h2 {
+    font-family: 'Courgette', sans-serif;
+}
+
+/* Add Courgette and Roboto fonts to spotlight ads */
+.spotlight-advertisements {
+    font-family: 'Courgette', sans-serif;
+}
+
+.spotlight-advertisements h2,
+.spotlight-advertisements p {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Add box around spotlight ads */
+.spotlight-advertisements {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #eee;
+    box-sizing: border-box;
+}
+
+/* Adjust layout for larger screens */
+.container-main {
+    display: grid;
+    grid-template-columns: 1fr 6fr; 
+}
+
+/* Styles for spotlight advertisements */
+.spotlight-advertisements {
+    grid-column: 2; /* Position the spotlight advertisements in the second column */
+    padding: 20px; /* Add padding */
+    margin-top: 20px; /* Add space between sidebar and spotlight advertisements */
+    background-color: #eee; /* Background color */
+    box-sizing: border-box; /* Include padding and border in total width/height */
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Add border around the box */
+}
+
+
+.spotlight-advertisements {
+    display: flex; /* Display advertisements side by side */
+    flex-wrap: wrap; /* Wrap items onto multiple lines */
+    justify-content: left;
+    margin: 20px;
+}
+
+.advertisement {
+    width: calc(33% - 20px); /* Each advertisement takes up 33% width minus margin */
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px; /* Add margin bottom to create space between advertisements */
+}
+
+.advertisement-content {
+    /* Ensure content doesn't overflow the box */
+    overflow: hidden;
+}
+
+
+.sidebar p, span {
+    font-family: Roboto;
+}
+
+.welcome-message {
+    font-family: Roboto;
+}
+
+footer {
+    font-family: Roboto;
+}
+
+.calendar {
+    font-family: Roboto;
 }

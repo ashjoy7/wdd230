@@ -1,38 +1,38 @@
 [
   {
-    "name": "Company A",
-    "address": "123 Main St, City, Country",
-    "phone": "123-456-7890",
-    "website": "https://www.companyA.com",
-    "image": "companyA.jpg",
-    "membership_level": "Gold",
-    "other_info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-  },
-  {
-    "name": "Company B",
-    "address": "456 Elm St, City, Country",
-    "phone": "987-654-3210",
-    "website": "https://www.companyB.com",
-    "image": "companyB.jpg",
-    "membership_level": "Silver",
-    "other_info": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-  },
-  {
-    "name": "Company C",
-    "address": "789 Oak St, City, Country",
-    "phone": "555-555-5555",
-    "website": "https://www.companyC.com",
-    "image": "companyC.jpg",
+    "name": "Sunny D's Delight",
+    "address": "424 N Huachuca Blvd, Huachuca City, AZ 85616",
+    "phone": "5204561334",
+    "website": "https://www.sunnyds.com",
+    "image": "images/companyA.jpg",
     "membership_level": "Bronze",
-    "other_info": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    "other_info": "Try our biscuits and gravy!"
   },
   {
-    "name": "Company D",
-    "address": "321 Maple St, City, Country",
-    "phone": "111-222-3333",
-    "website": "https://www.companyD.com",
-    "image": "companyD.jpg",
+    "name": "M&M Auto Body Collision & Powder Coatings",
+    "address": "317 N Huachuca Blvd, Huachuca City, AZ 85616",
+    "phone": "5204562628",
+    "website": "http://www.mmpowdercoatings.com/",
+    "image": "images/companyB.jpg",
+    "membership_level": "Silver",
+    "other_info": "We got auto stuff!"
+  },
+  {
+    "name": "The K Palace Theater",
+    "address": "290 S Huachuca Blvd, Huachuca City, AZ 85616",
+    "phone": "5205594484",
+    "website": "https://thekpalacetheater.com/",
+    "image": "images/companyC.jpeg",
+    "membership_level": "Gold",
+    "other_info": "Family oriented fun!"
+  },
+  {
+    "name": "Corte Del Rey",
+    "address": "226 S Huachuca Blvd, Huachuca City, AZ 85616",
+    "phone": "5202278642",
+    "website": "https://www.CorteDelRey.com",
+    "image": "images/companyD.jpg",
     "membership_level": "Basic",
-    "other_info": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+    "other_info": "We got trailer park stuff!"
   }
 ]
