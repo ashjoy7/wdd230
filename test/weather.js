@@ -60,10 +60,14 @@ function displayForecast(data) {
 function displayWeather(data) {
   currentTemp.innerHTML = `${Math.round(data.main.temp)}&deg;F`;
   weatherDesc.textContent = data.weather[0].description;
+  // Set the src attribute of the weather icon img element
   const iconCode = data.weather[0].icon;
-  const iconsrc = `https://openweathermap.org/img/w/${iconCode}.png`;
-  weatherIcon.setAttribute('src', iconsrc);
-  weatherIcon.setAttribute('alt', data.weather[0].description);
+  if (iconCode) {
+      const iconsrc = `https://openweathermap.org/img/w/${iconCode}.png`;
+      weatherIcon.setAttribute('src', iconsrc);
+  } else {
+      console.error("Icon code is empty.");
+  }
 }
 
 // Fetch current weather and forecast data, then display them
